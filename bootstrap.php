@@ -9,3 +9,6 @@ $app = new \Slim\App($settings);
 require __DIR__.'/app/routes.php';
 
 $app->run();
+
+$dotenv = new Dotenv\Dotenv(__DIR__);
+$dotenv->load();
