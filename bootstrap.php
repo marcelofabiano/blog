@@ -2,10 +2,10 @@
 
 require __DIR__.'/vendor/autoload.php';
 
-$app = new \Slim\App;
+$settings = require __DIR__.'/config/app.php';
 
-$app->get('/', function () {
-    return 'Hello world!';
-});
+$app = new \Slim\App($settings);
+
+require __DIR__.'/app/routes.php';
 
 $app->run();
