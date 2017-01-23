@@ -8,4 +8,9 @@ class HomeController extends Controller
     {
         return $this->render('home/index.twig');
     }
+
+    public function show($id)
+    {
+        return $this->render('home/show.twig');
+    }
 }
